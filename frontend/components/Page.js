@@ -9,6 +9,7 @@ const theme = {
 	grey: "#3A3A3A",
 	darkBlue: "#000260",
 	lightgrey: "#E1E1E1",
+	regOrange: "#ff9a00",
 	offWhite: "#EDEDED",
 	maxWidth: "1000px",
 	bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
@@ -42,7 +43,7 @@ injectGlobal`
 		margin: 0;
 		font-size: 1.5rem;
 		line-height: 2;
-		font-family: 'radnika_next';
+		font-family: 'Roboto', sans-serif;
 	}
 	a {
 		text-decoration: none;

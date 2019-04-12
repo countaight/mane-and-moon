@@ -4,27 +4,30 @@ import styled from "styled-components";
 import posed from "react-pose";
 
 const sidebarProps = {
-	open: { x: "100%" },
-	closed: { x: "0%" }
+	open: { x: "-100%", transition: { ease: "linear" } },
+	closed: { x: "0%", transition: { ease: "linear" } }
 };
 
 const Sidebar = styled(posed.nav(sidebarProps))`
 	position: fixed;
-	right: 0px;
+	left: 100vw;
 	top: 60px;
+
 	ul {
 		padding: 0;
 		margin: 0;
 		background: ${props => props.theme.offWhite};
 		list-style-type: none;
 		text-align: center;
-
-		li {
-			padding: 0;
-			margin: 0;
-		}
+		box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.09);
 	}
-	width: 100px;
+`;
+
+const NavLink = styled.li`
+	font-weight: 300;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	cursor: pointer;
 `;
 
 class Nav extends Component {
@@ -36,13 +39,13 @@ class Nav extends Component {
 		return (
 			<Sidebar pose={this.props.open ? "open" : "closed"}>
 				<ul>
-					<li>
+					<NavLink>
 						<Link href="#services">
 							<a>Services</a>
 						</Link>
-					</li>
-					<li>Portfolio</li>
-					<li>Connect</li>
+					</NavLink>
+					<NavLink>Portfolio</NavLink>
+					<NavLink>Connect</NavLink>
 				</ul>
 			</Sidebar>
 		);
