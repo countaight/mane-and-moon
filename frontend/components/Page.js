@@ -21,7 +21,7 @@ const StyledPage = styled.div`
 `;
 
 const Inner = styled.div`
-	overflow: hidden;
+	height: 100%;
 `;
 
 injectGlobal`

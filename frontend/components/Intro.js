@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const IntroImage = styled.div`
-	position: fixed;
+	position: sticky;
+	top: 0;
 	background-image: url("/static/Hair.jpg");
 	background-size: cover;
 	background-attachment: fixed;
@@ -65,7 +66,12 @@ class Intro extends Component {
 					<span className="mane">Mane</span>
 					<span className="and">&</span> <span className="moon">Moon</span>
 				</h1>
-				<p className="scissors">✂︎</p>
+				<p className="scissors">
+					<img
+						src="/static/scissors.png"
+						style={{ height: "24px", transform: "rotate(90deg)" }}
+					/>
+				</p>
 				<p className="quote">
 					"...in an instance of a full moon, she found her mane untamable..."
 				</p>

@@ -31,22 +31,48 @@ const NavLink = styled.li`
 `;
 
 class Nav extends Component {
-	constructor(props) {
-		super(props);
+	state = {
+		links: ["services", "portfolio"],
+		els: {}
+	};
+
+	getTop = link => {
+		const { els } = this.state;
+		const el = document.getElementById(link);
+
+		if (!el) return;
+
+		const position = el.getClientRects()[0].y;
+
+		els[link] = position;
+
+		this.setState({ ...this.state, els });
+	};
+
+	scrollTo = (e, link) => {
+		e.preventDefault();
+		const { els } = this.state;
+		window.scrollTo({ top: els[link], behavior: "smooth" });
+	};
+
+	renderLinks = () => {
+		return this.state.links.map(link => (
+			<NavLink key={link}>
+				<Link href={`#${link}`}>
+					<a onClick={e => this.scrollTo(e, link)}>{link}</a>
+				</Link>
+			</NavLink>
+		));
+	};
+
+	componentDidMount() {
+		this.state.links.forEach(link => this.getTop(link));
 	}
 
 	render() {
 		return (
 			<Sidebar pose={this.props.open ? "open" : "closed"}>
-				<ul>
-					<NavLink>
-						<Link href="#services">
-							<a>Services</a>
-						</Link>
-					</NavLink>
-					<NavLink>Portfolio</NavLink>
-					<NavLink>Connect</NavLink>
-				</ul>
+				<ul>{this.renderLinks()}</ul>
 			</Sidebar>
 		);
 	}
