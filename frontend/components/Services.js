@@ -1,5 +1,7 @@
 import styled from "styled-components";
+
 import Section, { Paragraph, InnerSection, BufferDiv } from "./styles/Section";
+import PriceItemList from "./PriceItemList";
 
 const PriceItem = styled.div`
 	display: grid;
@@ -19,30 +21,13 @@ const Services = () => (
 		<InnerSection>
 			<Paragraph>
 				<h2>Price List</h2>
+				<p>
+					All services start at prices listed and require a consultation before
+					finilizing the price.
+				</p>
 			</Paragraph>
 			<Paragraph bg="dark">
-				<PriceList>
-					<PriceItem>
-						<span>HAIR CUT</span>
-						<span>25</span>
-					</PriceItem>
-					<PriceItem>
-						<span>CUT/BLOWDRY</span>
-						<span>35</span>
-					</PriceItem>
-					<PriceItem>
-						<span>CUT/BLOWDRY/STYLE</span>
-						<span>45</span>
-					</PriceItem>
-					<PriceItem>
-						<span>TRIM</span>
-						<span>8</span>
-					</PriceItem>
-					<PriceItem>
-						<span>CHILDREN'S HAIRCUT</span>
-						<span>10</span>
-					</PriceItem>
-				</PriceList>
+				<PriceItemList />
 			</Paragraph>
 		</InnerSection>
 	</Section>

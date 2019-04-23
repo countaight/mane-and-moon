@@ -55,6 +55,10 @@ const IntroImage = styled.div`
 		text-align: right;
 		padding-right: 20px;
 	}
+
+	@media (min-width: 400px) {
+		background-size: contain;
+	}
 `;
 
 class Intro extends Component {

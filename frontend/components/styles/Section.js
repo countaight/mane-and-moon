@@ -21,16 +21,18 @@ const Paragraph = styled.div`
 	h2 {
 		font-family: "Italianno";
 		font-weight: 200;
-		font-size: 3rem;
+		font-size: 3.4rem;
 		padding: 0 10px;
 		margin: 0;
 	}
 
 	p {
 		margin: 0;
-		color: white;
+		color: ${props => (props.bg === "dark" ? "white" : "black")};
 		font-family: "Roboto";
 		font-weight: 300;
+		line-height: 1.5;
+		padding: 10px;
 	}
 `;
 
