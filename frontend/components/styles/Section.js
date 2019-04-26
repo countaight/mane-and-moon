@@ -4,11 +4,11 @@ const Section = styled.div`
 	position: sticky;
 	top: 60px;
 	width: 100%;
-	height: 100vh;
+	height: calc(100vh - 60px);
 `;
 
 const InnerSection = styled.div`
-	background-color: white;
+	background-color: ${props => (props.dark ? props.theme.darkBlue : "white")};
 	height: 100%;
 	padding: 20px;
 `;

@@ -22,6 +22,7 @@ const Logo = styled.h1`
   position: relative;
   z-index: 2;
   padding: 2rem;
+  cursor: pointer;
   a {
     padding: 0.5rem 1rem;
     background: ${props => props.theme.regOrange};

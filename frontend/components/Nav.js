@@ -32,7 +32,7 @@ const NavLink = styled.li`
 
 class Nav extends Component {
   state = {
-    links: ["services", "portfolio"],
+    links: ["services", "portfolio", "connect"],
     els: {}
   };
 
@@ -58,7 +58,7 @@ class Nav extends Component {
   scrollTo = (e, link) => {
     e.preventDefault();
     const { els } = this.state;
-    window.scrollTo({ top: els[link], behavior: "smooth" });
+    window.scrollTo({ top: els[link] - 60, behavior: "smooth" });
   };
 
   renderLinks = () => {
