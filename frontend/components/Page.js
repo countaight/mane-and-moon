@@ -50,6 +50,9 @@ injectGlobal`
 		text-decoration: none;
 		color: ${theme.black};
 	}
+	.u-lock-scroll {
+  	overflow: hidden !important;
+	}
 `;
 
 class Page extends Component {
