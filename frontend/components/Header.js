@@ -108,7 +108,7 @@ const Header = props => (
           opacity={1}
         />
       </MenuIcon>
-      <Nav open={props.open} />
+      <Nav open={props.open} toggleSidebar={props.toggleSidebar} />
     </div>
   </StyledHeader>
 );

@@ -59,6 +59,7 @@ class Nav extends Component {
     e.preventDefault();
     const { els } = this.state;
     window.scrollTo({ top: els[link] - 60, behavior: "smooth" });
+    this.props.toggleSidebar();
   };
 
   renderLinks = () => {

@@ -17,6 +17,8 @@ const Paragraph = styled.div`
 	background-color: ${props =>
 		props.bg === "dark" ? props.theme.darkBlue : props.theme.offWhite};
 	padding: 10px;
+	max-width: 900px;
+	margin: 0 auto;
 
 	h2 {
 		font-family: "Italianno";

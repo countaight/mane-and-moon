@@ -3,7 +3,7 @@ import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 
-const Home = () => (
+const Home = props => (
 	<>
 		<Intro />
 		<Services />
