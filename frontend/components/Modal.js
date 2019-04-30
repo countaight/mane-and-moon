@@ -6,6 +6,7 @@ const ModalScreen = styled.div`
 	position: fixed;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -13,9 +14,30 @@ const ModalScreen = styled.div`
 	background-color: rgba(0, 0, 0, 0.6);
 	z-index: 999;
 
-	img {
+	div {
 		width: 80%;
-		margin: 0 auto;
+
+		button {
+			width: 100%;
+			border: unset;
+			padding: 0;
+			background-color: transparent;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	@media (min-width: 600px) {
+		align-items: flex-end;
+		div {
+			width: 50%;
+
+			button:focus {
+				outline-color: orange;
+			}
+		}
 	}
 `;
 
@@ -28,7 +50,7 @@ const Modal = props => (
 			}}
 		>
 			<div>
-				<button>
+				<button onClick={props.closeImage}>
 					<img src={props.image} />
 				</button>
 			</div>
