@@ -19,7 +19,7 @@ class MyApp extends App {
 	}
 
 	state = {
-		sidebarOpen: false
+		sidebarOpen: false,
 	};
 
 	toggleSidebar = () => {

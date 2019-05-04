@@ -32,33 +32,31 @@ const NavLink = styled.li`
 
 class Nav extends Component {
   state = {
-    links: ["services", "portfolio", "connect"],
+    links: ["home", "services", "portfolio", "connect"],
     els: {}
   };
 
   componentDidMount() {
-    const { links } = this.state;
-
-    links.forEach(link => this.getTop(link));
+    this.getTops();
   }
 
-  getTop = link => {
-    const { els } = this.state;
-    const el = document.getElementById(link);
+  getTops = () => {
+    const { links, els } = this.state;
+    links.forEach((link, i) => {
+      const el = document.getElementById(link);
 
-    if (!el) return;
+      if (!el) return;
 
-    const position = el.getClientRects()[0].y;
+      els[link] = (window.innerHeight - 60) * i;
 
-    els[link] = position;
-
-    this.setState({ ...this.state, els });
+      this.setState({ ...this.state, els });
+    });
   };
 
   scrollTo = (e, link) => {
     e.preventDefault();
     const { els } = this.state;
-    window.scrollTo({ top: els[link] - 60, behavior: "smooth" });
+    window.scrollTo({ top: els[link], behavior: 'smooth' });
     this.props.toggleSidebar();
   };
 
