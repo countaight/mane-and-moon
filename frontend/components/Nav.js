@@ -38,6 +38,11 @@ class Nav extends Component {
 
   componentDidMount() {
     this.getTops();
+    window.addEventListener("resize", this.getTops);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.getTops);
   }
 
   getTops = () => {
