@@ -21,7 +21,7 @@ const Logo = styled.h1`
   margin-left: 2rem;
   position: relative;
   z-index: 2;
-  padding: 2rem;
+  padding-left: 2rem;
   cursor: pointer;
   a {
     padding: 0.5rem 1rem;
@@ -42,8 +42,9 @@ const StyledHeader = styled.header`
     position: fixed;
     grid-template-columns: 1fr auto;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     width: 100%;
+    height: 60px;
     background-color: ${props =>
       props.top ? "transparent" : props.theme.offWhite};
     z-index: 999;

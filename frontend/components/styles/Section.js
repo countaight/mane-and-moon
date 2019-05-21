@@ -11,13 +11,20 @@ const InnerSection = styled.div`
 	background-color: ${props => (props.dark ? props.theme.darkBlue : "white")};
 	height: 100%;
 	padding: 20px;
+
+	@media only screen
+	and (max-device-width: 812px)
+	and (orientation: landscape) {
+		display: flex;
+		align-items: start;
+	}
 `;
 
 const Paragraph = styled.div`
 	background-color: ${props =>
 		props.bg === "dark" ? props.theme.darkBlue : props.theme.offWhite};
 	padding: 10px;
-	max-width: 900px;
+	max-width: 800px;
 	margin: 0 auto;
 
 	h2 {
@@ -35,6 +42,13 @@ const Paragraph = styled.div`
 		font-weight: 300;
 		line-height: 1.5;
 		padding: 10px;
+	}
+
+	@media only screen
+	and (max-device-width: 812px)
+	and (orientation: landscape) {
+		width: 50%;
+		margin: unset;
 	}
 `;
 
