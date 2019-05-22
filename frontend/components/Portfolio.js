@@ -10,20 +10,19 @@ const Gallery = styled.div`
 	grid-gap: 20px;
 	padding: 10px;
 	overflow: scroll;
-	border: dashed white 1px;
+	border: solid white 1px;
 	border-color: ${props => props.theme.regOrange};
 	max-width: 900px;
 	margin: 0 auto;
 
 	img {
 		width: 100%;
-		height: 150px;
 		box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.09);
 	}
 
-	@media (min-width: 900px) {
+	@media (min-width: 800px) {
 		grid-template-columns: 1fr 1fr 1fr;
-		height: 70%;
+		height: 100%;
 
 		img {
 			height: 100%;

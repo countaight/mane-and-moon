@@ -57,11 +57,16 @@ injectGlobal`
 
 class Page extends Component {
 	state = {
-		top: true
+		top: true,
 	};
 
 	componentDidMount() {
 		window.addEventListener("scroll", this.atTop);
+		this.atTop();
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.atTop);
 	}
 
 	atTop = () => {

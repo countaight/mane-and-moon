@@ -64,7 +64,7 @@ const IntroImage = styled.div`
 class Intro extends Component {
 	render() {
 		return (
-			<IntroImage>
+			<IntroImage id="home">
 				<h2>Professional Hair Artist</h2>
 				<h1>
 					<span className="mane">Mane</span>

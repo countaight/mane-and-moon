@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import posed from 'react-pose';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import posed from "react-pose";
+import styled from "styled-components";
 
-import PriceItem from './PriceItem';
+import PriceItem from "./PriceItem";
 
 const itemDescProps = {
   closed: { height: 0 },
-  open: { height: 'auto' },
+  open: { height: "auto" }
 };
 
 const ScissorsIcon = posed.img({
   closed: { rotate: 90 },
-  open: { rotate: 180 },
+  open: { rotate: 180 }
 });
 
 const ItemDesc = styled(posed.div(itemDescProps))`
@@ -32,24 +32,24 @@ class PriceItemList extends Component {
     open: false,
     items: [
       {
-        name: 'HAIR SCULPTING',
+        name: "HAIR SCULPTING",
         description: `Cut/trim/shape, shampoo, conditioner, & blow dry (thermal set not included)\nLength charges apply\nApprox. 60 min`,
         options: [
           {
-            name: 'Women',
-            price: '55+',
+            name: "Women",
+            price: "55+"
           },
           {
-            name: 'Men',
-            price: '35+',
+            name: "Men",
+            price: "35+"
           },
           {
-            name: 'Youth (10 years and under)',
-            price: '25+',
-          },
-        ],
-      },
-    ],
+            name: "Youth (10 years and under)",
+            price: "25+"
+          }
+        ]
+      }
+    ]
   };
 
   render() {
@@ -64,13 +64,13 @@ class PriceItemList extends Component {
             <span>{name}</span>
             <span>
               <ScissorsIcon
-                pose={open === i ? 'open' : 'closed'}
+                pose={open === i ? "open" : "closed"}
                 src="/static/scissors.png"
-                style={{ height: '24px' }}
+                style={{ height: "24px" }}
               />
             </span>
-            <ItemDesc pose={open === i ? 'open' : 'closed'}>
-              <p style={{ textAlign: 'center' }}>{description}</p>
+            <ItemDesc pose={open === i ? "open" : "closed"}>
+              <p style={{ textAlign: "center" }}>{description}</p>
               {options.map(({ name, price }, i) => (
                 <PriceItem key={`name${i}`}>
                   <span>{name}</span>
