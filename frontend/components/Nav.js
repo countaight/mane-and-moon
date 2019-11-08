@@ -61,7 +61,7 @@ class Nav extends Component {
   scrollTo = (e, link) => {
     e.preventDefault();
     const { els } = this.state;
-    window.scrollTo({ top: els[link], behavior: 'smooth' });
+    window.scrollTo({ top: els[link], behavior: "smooth" });
     this.props.toggleSidebar();
   };
 
