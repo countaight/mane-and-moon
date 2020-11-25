@@ -40,7 +40,7 @@
     "waait": "^1.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.12.9",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
     "babel-plugin-module-resolver": "^3.1.1",
