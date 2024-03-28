@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import Section, { Paragraph, InnerSection } from "./styles/Section";
+import Section, { Paragraph, InnerSection } from './styles/Section';
 
 class Contact extends Component {
   render() {
@@ -10,14 +10,14 @@ class Contact extends Component {
         <InnerSection>
           <Paragraph>
             <h2>Connect</h2>
-            <img src={"/static/makeup_1.jpg"} style={{ width: "150px" }} />
+            <img src="/static/makeup_1.jpg" style={{ width: '150px' }} />
             <img
-              src={"/static/color_2.jpg"}
+              src="/static/color_2.jpg"
               style={{
-                width: "150px",
-                position: "relative",
-                top: "130px",
-                left: "-20px"
+                width: '150px',
+                position: 'relative',
+                top: '130px',
+                left: '-20px',
               }}
             />
           </Paragraph>

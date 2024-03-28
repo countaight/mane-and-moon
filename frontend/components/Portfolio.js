@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import Section, { Paragraph, InnerSection } from "./styles/Section";
-import Modal from "./Modal";
+import Section, { Paragraph, InnerSection } from './styles/Section';
+import Modal from './Modal';
 
 const Gallery = styled.div`
   display: grid;
@@ -33,19 +33,19 @@ const Gallery = styled.div`
 class Portfolio extends Component {
   state = {
     images: [
-      "hair_sculpting_2.jpg",
-      "hair_sculpting_4.jpg",
-      "hair_sculpting_men_1.jpg",
-      "hair_sculpting_men_2.jpg",
-      "color_1.jpg",
-      "makeup_2.jpg"
+      'hair_sculpting_2.jpg',
+      'hair_sculpting_4.jpg',
+      'hair_sculpting_men_1.jpg',
+      'hair_sculpting_men_2.jpg',
+      'color_1.jpg',
+      'makeup_2.jpg',
     ],
     imageOpen: false,
-    selectedImage: null
+    selectedImage: null,
   };
 
   selectImage = source => {
-    this.setState({ imageOpen: true, selectedImage: "/static/" + source });
+    this.setState({ imageOpen: true, selectedImage: `/static/${source}` });
     this.toggleScrollLock();
   };
 
@@ -55,7 +55,7 @@ class Portfolio extends Component {
   };
 
   toggleScrollLock = () =>
-    document.querySelector("html").classList.toggle("u-lock-scroll");
+    document.querySelector('html').classList.toggle('u-lock-scroll');
 
   render() {
     return (

@@ -1,10 +1,10 @@
-import Link from "next/link";
-import posed from "react-pose";
-import styled from "styled-components";
-import Router from "next/router";
-import NProgress from "nprogress";
+import Link from 'next/link';
+import posed from 'react-pose';
+import styled from 'styled-components';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 
-import Nav from "../components/Nav";
+import Nav from './Nav';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -46,7 +46,7 @@ const StyledHeader = styled.header`
     width: 100%;
     height: 60px;
     background-color: ${props =>
-      props.top ? "transparent" : props.theme.offWhite};
+      props.top ? 'transparent' : props.theme.offWhite};
     z-index: 999;
     box-shadow: ${props => props.theme.bs};
     transition: 400ms;
@@ -64,9 +64,9 @@ const Bar = posed.div({
   open: {
     opacity: ({ opacity }) => opacity,
     rotate: ({ angle }) => angle,
-    y: ({ y }) => y
+    y: ({ y }) => y,
   },
-  closed: { opacity: 1, rotate: 0, y: 0 }
+  closed: { opacity: 1, rotate: 0, y: 0 },
 });
 
 const MenuBar = styled(Bar)`
@@ -89,21 +89,21 @@ const Header = props => (
       <MenuIcon onClick={props.toggleSidebar}>
         <MenuBar
           top={props.top}
-          pose={props.open ? "open" : "closed"}
+          pose={props.open ? 'open' : 'closed'}
           angle={-45}
           y={11}
           opacity={1}
         />
         <MenuBar
           top={props.top}
-          pose={props.open ? "open" : "closed"}
+          pose={props.open ? 'open' : 'closed'}
           angle={0}
           y={0}
           opacity={0}
         />
         <MenuBar
           top={props.top}
-          pose={props.open ? "open" : "closed"}
+          pose={props.open ? 'open' : 'closed'}
           angle={45}
           y={-11}
           opacity={1}

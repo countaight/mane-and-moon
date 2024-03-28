@@ -1,8 +1,8 @@
-import App from "next/app";
-import { ApolloProvider } from "react-apollo";
-import withData from "../lib/withData";
+import App from 'next/app';
+import { ApolloProvider } from 'react-apollo';
+import withData from '../lib/withData';
 
-import Page from "../components/Page";
+import Page from '../components/Page';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -19,7 +19,7 @@ class MyApp extends App {
   }
 
   state = {
-    sidebarOpen: false
+    sidebarOpen: false,
   };
 
   toggleSidebar = () => {

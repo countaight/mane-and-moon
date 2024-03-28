@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import Section, { Paragraph, InnerSection, BufferDiv } from "./styles/Section";
-import PriceItemList from "./PriceItemList";
+import Section, { Paragraph, InnerSection, BufferDiv } from './styles/Section';
+import PriceItemList from './PriceItemList';
 
 class Services extends Component {
   constructor(props) {

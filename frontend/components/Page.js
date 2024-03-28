@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import Header from "./Header";
-import Meta from "./Meta";
+import React, { Component } from 'react';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
+import Header from './Header';
+import Meta from './Meta';
 
 const theme = {
-  red: "#FF0000",
-  black: "#393939",
-  grey: "#3A3A3A",
-  darkBlue: "#000260",
-  lightBlue: "#6364A0",
-  lightGrey: "#E1E1E1",
-  regOrange: "#ff9a00",
-  offWhite: "#EDEDED",
-  maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
+  red: '#FF0000',
+  black: '#393939',
+  grey: '#3A3A3A',
+  darkBlue: '#000260',
+  lightBlue: '#6364A0',
+  lightGrey: '#E1E1E1',
+  regOrange: '#ff9a00',
+  offWhite: '#EDEDED',
+  maxWidth: '1000px',
+  bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
 
 const StyledPage = styled.div`
-  background: "white";
+  background: 'white';
   color: ${props => props.theme.black};
 `;
 
@@ -58,16 +58,16 @@ const GlobalStyle = createGlobalStyle`
 
 class Page extends Component {
   state = {
-    top: true
+    top: true,
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.atTop);
+    window.addEventListener('scroll', this.atTop);
     this.atTop();
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.atTop);
+    window.removeEventListener('scroll', this.atTop);
   }
 
   atTop = () => {

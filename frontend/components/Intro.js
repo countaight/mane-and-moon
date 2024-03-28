@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 const IntroImage = styled.div`
   position: sticky;
   top: 0;
-  background-image: url("/static/Hair.jpg");
+  background-image: url('/static/Hair.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -26,7 +26,7 @@ const IntroImage = styled.div`
 
   h1 {
     .and {
-      font-family: "Italianno", serif;
+      font-family: 'Italianno', serif;
       font-size: 5rem;
     }
     .mane,
@@ -37,7 +37,7 @@ const IntroImage = styled.div`
       font-style: italic;
     }
     .moon {
-      font-family: "Lato";
+      font-family: 'Lato';
       font-weight: 700;
     }
   }
@@ -49,7 +49,7 @@ const IntroImage = styled.div`
 
   .quote {
     font-size: 1.5em;
-    font-family: "Italianno";
+    font-family: 'Italianno';
     width: 50%;
     line-height: 1.2em;
     text-align: right;
@@ -73,7 +73,7 @@ class Intro extends Component {
         <p className="scissors">
           <img
             src="/static/scissors.png"
-            style={{ height: "24px", transform: "rotate(90deg)" }}
+            style={{ height: '24px', transform: 'rotate(90deg)' }}
           />
         </p>
         <p className="quote">

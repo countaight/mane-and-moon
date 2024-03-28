@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import FocusTrap from "focus-trap-react";
+import FocusTrap from 'focus-trap-react';
 
 const ModalScreen = styled.div`
   position: fixed;
@@ -46,7 +46,7 @@ const Modal = props => (
     <FocusTrap
       focusTrapOptions={{
         onDeactivate: props.closeImage,
-        clickOutsideDeactivates: true
+        clickOutsideDeactivates: true,
       }}
     >
       <div>

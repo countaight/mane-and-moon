@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import Link from "next/link";
-import styled from "styled-components";
-import posed from "react-pose";
+import React, { Component } from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
+import posed from 'react-pose';
 
 const sidebarProps = {
-  open: { x: "-100%", transition: { ease: "linear" } },
-  closed: { x: "0%", transition: { ease: "linear" } }
+  open: { x: '-100%', transition: { ease: 'linear' } },
+  closed: { x: '0%', transition: { ease: 'linear' } },
 };
 
 const Sidebar = styled(posed.nav(sidebarProps))`
@@ -32,17 +32,17 @@ const NavLink = styled.li`
 
 class Nav extends Component {
   state = {
-    links: ["home", "services", "portfolio", "connect"],
-    els: {}
+    links: ['home', 'services', 'portfolio', 'connect'],
+    els: {},
   };
 
   componentDidMount() {
     this.getTops();
-    window.addEventListener("resize", this.getTops);
+    window.addEventListener('resize', this.getTops);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.getTops);
+    window.removeEventListener('resize', this.getTops);
   }
 
   getTops = () => {
@@ -61,7 +61,7 @@ class Nav extends Component {
   scrollTo = (e, link) => {
     e.preventDefault();
     const { els } = this.state;
-    window.scrollTo({ top: els[link], behavior: "smooth" });
+    window.scrollTo({ top: els[link], behavior: 'smooth' });
     this.props.toggleSidebar();
   };
 
@@ -81,7 +81,7 @@ class Nav extends Component {
     const { open } = this.props;
 
     return (
-      <Sidebar pose={open ? "open" : "closed"}>
+      <Sidebar pose={open ? 'open' : 'closed'}>
         <ul>{this.renderLinks()}</ul>
       </Sidebar>
     );
